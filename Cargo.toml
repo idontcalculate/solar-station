@@ -1,0 +1,19 @@
+[package]
+name = "solarpunk"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+diesel = { version = "2.0", features = ["postgres", "r2d2"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+dotenv = "0.15"
+uuid = { version = "1.0", features = ["v4"] }
+tokio = { version = "1.18", features = ["full"] }
+reqwest = { version = "0.12.9", features = ["json"] }
+axum = { version = "0.7.7", features = ["macros"] }
+axum-server = "0.7.1"
+
+[[bin]]
+name = "solarpunk"
+path = "src/main.rs"
