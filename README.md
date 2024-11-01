@@ -1,4 +1,4 @@
-# Solar-Station Terminal Interface
+# Solar-Station Terminal
 
 ## Overview
 
