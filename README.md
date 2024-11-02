@@ -8,7 +8,7 @@
 
 ## Features
 
-- **User Profiles**: Users, known as "Solarians," can create profiles with an alias, skill tags, bio, and wallet address for micro-transactions.
+- **User Profiles**: Users can create profiles with an alias, skill tags, bio, and wallet address for micro-transactions.
 - **Project Directories**: Projects seeking support or resources can list details, needs, and funding goals.
 - **Geo-location and Map Integration**: Locate nearby Solarians, projects, and community hubs through an interactive map.
 - **Vector Database and Knowledge Graphs**: Powered by Qdrant for vector storage and Neo4j for recommendation and community insights.
