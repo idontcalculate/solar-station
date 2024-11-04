@@ -1,22 +1,14 @@
-use axum::{routing::post, Json, Router};
-use serde::{Deserialize, Serialize};
+use solarpunk::insert_vector; // Import from the library crate
+use axum::{routing::post, Router};
 use std::net::SocketAddr;
 use axum_server::Handle;
 
-#[derive(Serialize, Deserialize)]
-struct VectorData {
-    id: String,
-    vector: Vec<f32>,
-}
-
-async fn insert_vector(Json(_data): Json<VectorData>) -> Result<String, String> {
-    Ok("Vector inserted successfully".to_string())
-}
-
 #[tokio::main]
 async fn main() {
+    // Create the Axum app with routes
     let app = Router::new().route("/insert_vector", post(insert_vector));
 
+    // Define the address and start the server
     let addr = SocketAddr::from(([127, 0, 0, 1], 8080));
     let handle = Handle::new();
 
