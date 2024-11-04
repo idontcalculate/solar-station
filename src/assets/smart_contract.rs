@@ -1,0 +1,1 @@
+// Placeholder for smart_contract module
