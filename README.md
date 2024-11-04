@@ -23,16 +23,16 @@
 - **Modules**:
   - **Profiles**: `/users` for skills and connections.
   - **Projects**: `/projects` for initiatives, funding, and resources.
-  - **Crypto Wallet**: Micro-transactions powered by `rust-bitcoin` and `ethers-rs`.
+  - **Crypto Wallet**: Micro-transactions powered by `ethers-rs`.
 
-### **Frontend** – Glitch Integration
+### **Frontend** – Ratatui
 - **Node.js**: API for simulating frontend interactions with Rust backend.
 - **Terminal UI**: Ratatui-powered terminal experience.
 - **Real-Time Modules**: Maps, project tracking, and connections.
 
 ### **Database**
 - **Qdrant**: Vector database for recommendations.
-- **Neo4j**: Knowledge graph to map connections between Solarians and initiatives.
+- **Neo4j**: Knowledge graph to map connections between users and initiatives.
 
 ---
 
@@ -52,3 +52,6 @@
 
 ## License
 **MIT License** – Join the movement. Rethink community. Decentralize change. 🌍🌱
+
+## Invite link:
+[solar-station-terminal](https://solar-terminal.glitch.me)
