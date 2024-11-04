@@ -13,7 +13,7 @@ pub struct VectorData {
 #[derive(Serialize)]
 struct QdrantPayload {
     points: Vec<VectorDataWrapper>,
-    ids: Vec<Uuid>, // Explicitly include `ids` for each point
+    ids: Vec<Uuid>,
 }
 
 // Wrapper structure for each point, as required by Qdrant
@@ -22,16 +22,13 @@ struct VectorDataWrapper {
     vector: Vec<f32>,
 }
 
-// Route handler to insert vector into Qdrant
+// Function to insert vector into Qdrant
 pub async fn insert_vector(Json(data): Json<VectorData>) -> Result<String, String> {
-    // Check if the vector is empty and return an error if so
     if data.vector.is_empty() {
         return Err("Vector data cannot be empty".to_string());
     }
 
     let client = Client::new();
-
-    // Wrap the data into Qdrant's expected payload structure
     let payload = QdrantPayload {
         points: vec![VectorDataWrapper {
             vector: data.vector,
@@ -39,7 +36,6 @@ pub async fn insert_vector(Json(data): Json<VectorData>) -> Result<String, Strin
         ids: vec![data.id],
     };
 
-    // Send request to Qdrant
     let response = client
         .post("http://localhost:6333/collections/solar-collection/points")
         .json(&payload)
