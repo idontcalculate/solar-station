@@ -1,6 +1,7 @@
-// src/lib.rs
-
-pub mod qdrant_crud; 
-pub use qdrant_crud::{VectorData, insert_vector}; 
-
 pub mod assets;
+
+pub mod user_profile {
+    pub mod profile;
+    pub mod db;
+    //pub mod qdrant_integrations; // Include this to expose Qdrant integrations
+}
